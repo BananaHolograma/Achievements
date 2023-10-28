@@ -10,17 +10,15 @@ config_version=5
 
 [application]
 
-config/name="GodotParadiseHealthComponent"
-config/description="Effortlessly simulate health and damage for entities within your video game.
-
-This component handles all aspects related to taking damage and managing health on the parent node. While typically added to a `CharacterBody2D`, there are no limitations preventing its use with a `StaticRigidBody2D`, allowing you to imbue life into objects like trees or other in-game elements.
-"
+config/name="GodotParadiseAchievements"
+config/description="Implement achievements in your game in a simple way and with minimal security practices.
+You can access this functionality using the class GodotEssentialsAchievement where you can interact with your source file"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[editor_plugins]
+[autoload]
 
-enabled=PackedStringArray("res://addons/health_component/plugin.cfg", "res://addons/jjajajaja/plugin.cfg")
+GodotParadiseAchievements="*res://addons/achievements/achievements.tscn"
 
 [rendering]
 
