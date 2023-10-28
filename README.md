@@ -56,16 +56,20 @@ Before start you need to set few project settings that will be available after l
 ![achievements-config](https://github.com/GodotParadise/Achievements/blob/main/images/achievements_config.png)
 
 **Local source** refers to the path of the local file that contains the achievements template. This file is read-only and is used solely to define the structure of the achievements in your game. For example: `res://settings/achievements.json`
+
 **Remote source** on the other hand, refers to the path of the remote JSON file that also holds the achievements template. The same rules apply as for the local source, but this information is obtained from a remote URL. For example: `https://myserver/achievements.json`
+
 **Save directory** is the location where the encrypted saved file, used to track achievement progress, will be created on the player's machine. By default, it utilizes `OS.get_user_data_dir()/[project_name]`
+
 **Save file name** is the name of the encrypted file that tracks achievement progress. By default, it is named `achievements.json`
+
 **Password** is the character set used for encrypting and decrypting the saved achievements file. By default, it generates a random string with a length of 25 characters. This length should be sufficient for most use cases, ensuring that players cannot alter their achievement progress accessing the file.
 
 # Ready
 When this node becomes ready, it performs several actions:
 1. It connects itself to the `achievement_updated` signal, which updates the encrypted file and checks if all achievements have been unlocked. If all achievements are unlocked, it emits the `all_achievements_unlocked` signal.
 2. It creates the save directory using the path defined in **ProjectSettings**.
-3. It prepares the achievements within the class by reading from the sources defined in ProjectSettings
+3. It prepares the achievements within the class by reading from the sources defined in **ProjectSettings**
 4. Sync the latest achievements update from the encrypted saved file if it exists
 
 # Achievement structure
@@ -96,16 +100,23 @@ This class serves as a helper for updating and unlocking achievements while emit
 # Functions
 ## get_achievement(name: String) -> Dictionary
 Retrieve the information from the desired achievement, if the name does not exist as key it will return an empty dictionary.
+
 `GodotEssentialsAchievements.get_achievement("orcs_party")`
+
 ## update_achievement(name: String, data: Dictionary)
 This function updates the properties of the selected achievement, with values from the data dictionary overriding the existing ones. This action also emits the `achievement_updated` signal.
+
 `GodotEssentialsAchievements.update_achievement("orcs_party", {"current_progress": 0.55})`
+
 ## unlock_achievement(name: String)
 If the achievement was not previously unlocked, this function changes the `unlocked` variable to true and emits the `achievement_unlocked` signal. This action directly unlocks the achievement without further checks.
+
 `GodotEssentialsAchievements.unlock_achievement("orcs_party")`
+
 ## reset_achievement(name: String, data: Dictionary = {})
 Reset the achievement to a previous state. The `current_progress` and `unlocked` will be set to 0 and false respectively. You can pass as second parameter the data you want to update in this process.
-This action also emits the `achievement_reset` and `achievement_updated` signals
+This action also emits the `achievement_reset` and `achievement_updated` signals.
+
 `GodotEssentialsAchievements.reset_achievement("orcs_party", {"description": "An orc party was discovered"})`
 
 # Signals
