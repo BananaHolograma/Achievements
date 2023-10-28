@@ -3,7 +3,6 @@ extends EditorPlugin
 
 const PLUGIN_PREFIX = "GodotParadise"
 
-
 var SETTINGS_BASE = "{project_name}/config".format({"project_name": ProjectSettings.get_setting("application/config/name")})
 var DEFAULT_SETTINGS = [
 	{
@@ -44,7 +43,7 @@ func _enter_tree():
 
 
 func _exit_tree():
-	remove_autoload_singleton(_add_prefix("GodotParadiseAchievements"))
+	remove_autoload_singleton(_add_prefix("Achievements"))
 	_remove_settings()
 	
 

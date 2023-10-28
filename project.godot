@@ -8,6 +8,14 @@
 
 config_version=5
 
+[GodotParadiseAchievements]
+
+config/achievements/local_source="res://"
+config/achievements/remote_source="https://"
+config/achievements/save_directory="C:/Users/local_rro7db8/AppData/Roaming/Godot/app_userdata/GodotParadiseAchievements"
+config/achievements/save_file_name="achievements.json"
+config/achievements/password="w52rg6oR2YiVQJZDSIGPNWujh"
+
 [application]
 
 config/name="GodotParadiseAchievements"
@@ -19,6 +27,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 GodotParadiseAchievements="*res://addons/achievements/achievements.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/achievements/plugin.cfg")
 
 [rendering]
 
