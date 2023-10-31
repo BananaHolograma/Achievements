@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/github/license/GodotParadise/Achievements?cacheSeconds=2592000)](https://github.com/GodotParadise/Achievements/blob/main/LICENSE.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/godotparadise/Achievements/pulls)
 [![](https://img.shields.io/discord/1167079890391138406.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/XqS7C34x)
+[![Kofi](https://badgen.net/badge/icon/kofi?icon=kofi&label)](https://ko-fi.com/bananaholograma)
 </p>
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/GodotParadise/Achievements/blob/main/README.md)
